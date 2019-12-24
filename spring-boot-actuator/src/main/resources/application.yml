@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+management:
+  endpoint:
+    health:
+      group:
+        custom:
+          show-details: always
+          include: diskSpace
+
+info:
+  app:
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
