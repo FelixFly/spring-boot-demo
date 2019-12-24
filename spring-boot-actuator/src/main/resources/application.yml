@@ -1,13 +1,31 @@
 server:
   port: 8090
 
+
 management:
   endpoint:
+    metrics:
+      enabled: true
     health:
       group:
         custom:
           show-details: always
           include: diskSpace
+  info:
+    git:
+      mode: full
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  metrics:
+    web:
+      server:
+        request:
+          autotime:
+            enabled: true
+#  server:
+#    port: -1
 
 info:
   app:
@@ -15,3 +33,7 @@ info:
     java:
       source: @java.version@
       target: @java.version@
+
+spring:
+  jmx:
+    enabled: true
