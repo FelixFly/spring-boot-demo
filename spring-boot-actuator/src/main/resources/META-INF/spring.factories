@@ -1,3 +1,10 @@
 org.springframework.context.ApplicationListener=\
 org.springframework.boot.context.ApplicationPidFileWriter,\
-org.springframework.boot.web.context.WebServerPortFileWriter
+org.springframework.boot.web.context.WebServerPortFileWriter,\
+top.felixfly.springboot.springbootdemo.container.CustomSmartApplicationListener
+
+org.springframework.context.ApplicationContextInitializer=\
+top.felixfly.springboot.springbootdemo.container.CustomApplicationContextInitializer
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+top.felixfly.springboot.springbootdemo.environment.CustomEnvironmentPostProcessor
